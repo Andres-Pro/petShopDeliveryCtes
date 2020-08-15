@@ -1,0 +1,38 @@
+@import 'bootstrap/app';
+@import 'galery.scss';
+
+.root {
+    @include media-breakpoint-down(xs) {
+        .col-sm-6 {
+            flex: 0 0 100% ;
+            max-width: 100% ;
+        }
+    }
+    @include  media-breakpoint-between (xs, sm) {
+        .col-sm-6 {
+            flex: 0 0 50% ;
+            max-width: 100% ;
+        }
+    }
+    @include media-breakpoint-up(sm) {
+        .col-md-3 {
+            flex: 0 0 25% ;
+            max-width: 100% ;
+        }
+    }
+    .person-info {
+        .card-title {
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+}
+
+footer {
+    flex-shrink: 0;
+    display: block !important;
+    background-color: $primary;
+    text-align: left !important;
+    height: 71px;
+    overflow: none
+  }

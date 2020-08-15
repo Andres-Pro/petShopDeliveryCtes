@@ -1,0 +1,49 @@
+
+
+
+$primary:                 #d80026 !default;
+$background-2:               #c0bfbf !default;
+$background:               #f3f3f3e6 !default;
+
+$theme-colors: () !default;
+
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $background-2,
+    "tertiary": $background,
+  ),
+    $theme-colors
+);
+
+$grid-breakpoints: (
+    xs: 325px,
+    sm: 1024px,
+    md: 1256px,
+    lg: 1280px,
+    xl: 2280px
+);
+
+$container-max-widths: (
+    xs: 325px,
+    sm: 1024px,
+    md: 1256px,
+    lg: 1280px,
+    xl: 2280px
+);
+
+
+.container {
+    max-width: 1256px !important;
+}
+
+html body {
+    font-family: helvetica neue,Helvetica,Arial,sans-serif;
+    background-color: $background;
+}
+
+header {
+    background-color: $background-2;
+}
+
+@import "~bootstrap/scss/bootstrap";
